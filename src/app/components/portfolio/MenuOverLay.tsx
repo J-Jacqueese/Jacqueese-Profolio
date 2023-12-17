@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import NavLink from './NavLink'
-import { NavigationItem } from '../types/navlink'
+import { NavigationItem } from '../../types/navlink'
 
 
 

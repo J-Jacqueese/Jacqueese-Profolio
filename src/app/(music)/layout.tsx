@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar"
+import NavBar from "../components/portfolio/NavBar"
 // Shared Components
 import { Metadata } from 'next'
 // setting meta

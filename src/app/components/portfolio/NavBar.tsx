@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import NavLink from './NavLink'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import MenuOverLay from './MenuOverLay'
-import { NavigationItem } from '../types/navlink'
+import { NavigationItem } from '../../types/navlink'
 
 function NavBar() {
   const navLinks: NavigationItem[] = [{ title: "Music", path: "music" }, { title: "About", path: "about" }, { title: "Project", path: "#project" }, { title: "Contact", path: "contact" }]
