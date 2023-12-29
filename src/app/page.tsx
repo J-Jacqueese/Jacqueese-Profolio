@@ -1,9 +1,9 @@
 "use client"
-import HeroSection from './components/portfolio/HeroSection'
-import NavBar from './components/portfolio/NavBar'
-import AboutSection from './components/portfolio/AboutSection'
-import ProjectSection from './components/portfolio/ProjectSection'
-import { Button } from "../cmps/index";
+import HeroSection from '../components/portfolio/HeroSection'
+import NavBar from '../components/portfolio/NavBar'
+import AboutSection from '../components/portfolio/AboutSection'
+import ProjectSection from '../components/portfolio/ProjectSection'
+import { Button } from "../components/material-ui/index";
 
 export default function Home() {
   return (

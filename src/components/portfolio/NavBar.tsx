@@ -4,10 +4,10 @@ import React, { useState } from 'react'
 import NavLink from './NavLink'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import MenuOverLay from './MenuOverLay'
-import { NavigationItem } from '../../types/navlink'
+import { NavigationItem } from '../../app/types/navlink'
 
 function NavBar() {
-  const navLinks: NavigationItem[] = [{ title: "English", path: "english" }, { title: "Music", path: "music" }, { title: "About", path: "about" }, { title: "Project", path: "#project" }, { title: "Contact", path: "contact" }]
+  const navLinks: NavigationItem[] = [{ title: "English", path: "english/main" }, { title: "Music", path: "music" }, { title: "About", path: "about" }, { title: "Project", path: "#project" }, { title: "Contact", path: "contact" }]
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100'>

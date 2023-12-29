@@ -1,4 +1,5 @@
-import NavBar from "../components/portfolio/NavBar"
+import { FooterWithSocialLinks } from "../../components/english/Footer"
+import NavBar from "../../components/portfolio/NavBar"
 // Shared Components
 import { Metadata } from 'next'
 // setting meta
@@ -11,11 +12,9 @@ export default function AboutLayout({
     children: React.ReactNode
 }) {
     return (
-        <main>
-            <NavBar />
-            <div className="container mt-24 mx-auto px-12 py-4">
-                {children}
-            </div>
+        <main className="w-full min-h-full">
+            {children}
+            <FooterWithSocialLinks />
         </main>
     )
 }

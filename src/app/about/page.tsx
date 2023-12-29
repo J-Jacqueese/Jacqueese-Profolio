@@ -1,5 +1,5 @@
 "use client"
-import { Button } from "../../cmps/index";
+import { Button } from "../../components/material-ui/index";
 
 export default function Home() {
   return (
