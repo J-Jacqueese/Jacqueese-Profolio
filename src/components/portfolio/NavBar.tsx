@@ -7,7 +7,7 @@ import MenuOverLay from './MenuOverLay'
 import { NavigationItem } from '../../app/types/navlink'
 
 function NavBar() {
-  const navLinks: NavigationItem[] = [{ title: "Geography", path: "geography" },{ title: "English", path: "english/main" }, { title: "Music", path: "music" }, { title: "About", path: "about" }, { title: "Project", path: "#project" }, { title: "Contact", path: "contact" }, { title: "Login", path: "login" }]
+  const navLinks: NavigationItem[] = [{ title: "Geography", path: "geography/main" },{ title: "English", path: "english/main" }, { title: "Music", path: "music" }, { title: "About", path: "about" }, { title: "Project", path: "#project" }, { title: "Contact", path: "contact" }, { title: "Login", path: "login" }]
   const [navbarOpen, setNavbarOpen] = useState(false)
   return (
     <nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100'>
