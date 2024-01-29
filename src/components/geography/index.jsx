@@ -1,14 +1,14 @@
-"use client"
-import React, { useEffect, useRef } from 'react';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import mapboxgl from 'mapbox-gl';
+"use client";
+import mapboxgl from "mapbox-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
+import React, { useEffect, useRef } from "react";
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiamFjcXVlZXNlIiwiYSI6ImNscmtlOXNkOTBkNHIybm8yd3kzNmsxbG4ifQ.Qa8wv7Jk4yvCjc6Y_pwyeA';
+mapboxgl.accessToken =
+	"pk.eyJ1IjoiamFjcXVlZXNlIiwiYSI6ImNscmtlOXNkOTBkNHIybm8yd3kzNmsxbG4ifQ.Qa8wv7Jk4yvCjc6Y_pwyeA";
 
 const MapComponent = (props) => {
 	const mapContainerRef = useRef(null);
-	let map = null
-
+	let map = null;
 
 	useEffect(() => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -19,18 +19,18 @@ const MapComponent = (props) => {
 			zoom: 10, // 设置地图缩放级别
 		});
 		map.addControl(new mapboxgl.NavigationControl());
-		map.setStyle('mapbox://styles/mapbox/' + props.mapStyle);
-		map.on('load', () => {
-			map.addSource('route', {
-				'type': 'geojson',
-				'data': {
-					'type': 'Feature',
-					'properties': {
-						"ethnicity": "Asian"
+		map.setStyle("mapbox://styles/mapbox/" + props.mapStyle);
+		map.on("load", () => {
+			map.addSource("route", {
+				type: "geojson",
+				data: {
+					type: "Feature",
+					properties: {
+						ethnicity: "Asian",
 					},
-					'geometry': {
-						'type': 'LineString',
-						'coordinates': [
+					geometry: {
+						type: "LineString",
+						coordinates: [
 							[-122.483696, 37.833818],
 							[-122.483482, 37.833174],
 							[-122.483396, 37.8327],
@@ -51,23 +51,23 @@ const MapComponent = (props) => {
 							[-122.49125, 37.832429],
 							[-122.491636, 37.832564],
 							[-122.492237, 37.833378],
-							[-122.493782, 37.833683]
-						]
-					}
-				}
+							[-122.493782, 37.833683],
+						],
+					},
+				},
 			});
 			map.addLayer({
-				'id': 'route',
-				'type': 'line',
-				'source': 'route',
-				'layout': {
-					'line-join': 'round',
-					'line-cap': 'round'
+				id: "route",
+				type: "line",
+				source: "route",
+				layout: {
+					"line-join": "round",
+					"line-cap": "round",
 				},
-				'paint': {
-					'line-color': '#4963F2',
-					'line-width': 8
-				}
+				paint: {
+					"line-color": "#4963F2",
+					"line-width": 8,
+				},
 			});
 		});
 		return () => {
@@ -75,7 +75,9 @@ const MapComponent = (props) => {
 		};
 	}, [props.mapStyle]);
 
-	return <div ref={mapContainerRef} style={{ width: '100%', height: '100%' }} ></div>
+	return (
+		<div ref={mapContainerRef} style={{ width: "100%", height: "100%" }}></div>
+	);
 };
 
 export default MapComponent;

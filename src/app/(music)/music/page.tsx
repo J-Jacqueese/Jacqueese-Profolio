@@ -1,8 +1,5 @@
-"use client"
-import * as React from "react"
+"use client";
+import * as React from "react";
 export default function Page() {
-
-
-  return (<div>Hello</div>)
+	return <div>Hello</div>;
 }
-

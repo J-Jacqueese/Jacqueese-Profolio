@@ -1,21 +1,19 @@
-import NavBar from "../../components/portfolio/NavBar"
 // Shared Components
-import { Metadata } from 'next'
+import { Metadata } from "next";
+import NavBar from "../../components/portfolio/NavBar";
 // setting meta
 export const metadata: Metadata = {
-  title: 'Music',
-}
+	title: "Music",
+};
 export default function AboutLayout({
-  children, // will be a page or nested layout
+	children, // will be a page or nested layout
 }: {
-  children: React.ReactNode
+	children: React.ReactNode;
 }) {
-  return (
-    <main>
-      <NavBar />
-      <div className="container mt-24 mx-auto px-12 py-4">
-        {children}
-      </div>
-    </main>
-  )
+	return (
+		<main>
+			<NavBar />
+			<div className="container mt-24 mx-auto px-12 py-4">{children}</div>
+		</main>
+	);
 }

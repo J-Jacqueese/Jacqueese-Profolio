@@ -1,2 +1,2 @@
-import LoginAndRegister from './LoginAndRegister'
-export { LoginAndRegister }
+import LoginAndRegister from "./LoginAndRegister";
+export { LoginAndRegister };
